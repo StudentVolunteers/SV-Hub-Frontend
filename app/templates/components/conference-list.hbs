@@ -1,8 +1,20 @@
 <h2>{{title}}</h2>
 
 <ul>
-  {{#each models as |item|}}
-    <li>{{item}}</li>
+  {{#each conferences as |conference|}}
+    <li>{{conference}}</li>
+    {{!-- {{#link-to "conferences" conference}}{{conference.title}} --}}
+      <div class="panel panel-primary conference-panel">
+        <div class="panel-heading">
+          <!-- <p>{{conference}}</p> -->
+          <h3 class="panel-title" title="{{conference.name}} {{conference.year}}">{{conference.name}} {{conference.year}}</h3>
+        </div>
+        <div class="panel-body">
+          <img src="../images/bee.jpeg" alt="" class="conf-panel-content">
+        </div>
+        <div class="panel-footer">{{conference.start}} - {{conference.end}}</div>
+      </div>
+    {{!-- {{/link-to}} --}}
   {{/each}}
 </ul>
 
