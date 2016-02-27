@@ -1,0 +1,11 @@
+<h2>List of Conferences</h2>
+
+<ul>
+  {{#each model as |conference|}}
+    <li>{{conference}}</li>
+  {{/each}}
+</ul>
+
+{{conference-list title="List of Conferences" models=model}}
+
+{{outlet}}
